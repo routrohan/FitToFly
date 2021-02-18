@@ -1,7 +1,7 @@
 .dash
 {
     /* border:3px solid red; */
-    height:100vh;
+    height:90vh;
     text-align: center;
 
 }
@@ -9,7 +9,7 @@
 
 .dash h3
 {
-    font-size:3rem;
+    font-size:2.5rem;
     font-weight:800;
     color:#1261A0;
     margin-top:20px;

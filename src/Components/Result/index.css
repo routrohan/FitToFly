@@ -9,14 +9,14 @@
 {
     color:#1261A0;
     font-weight:800;
-    font-size:4rem;
+    font-size:3.5rem;
 }
 
 .result-box h4
 {
     color:#1261A0;
     font-weight:800;
-    font-size:2rem;
+    font-size:1.5rem;
 }
 
 
@@ -38,5 +38,5 @@
 .verdict h5
 {
     margin:10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }

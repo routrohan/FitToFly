@@ -1,6 +1,6 @@
 .report-box
 {
-    height:100vh;
+    height:90vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@
 .report-box h1
 {
     font-weight:800;
-    font-size:4rem;
+    font-size:3.5rem;
     color:#1261A0;
 }
 
@@ -28,7 +28,7 @@
 
 .report-inner h5
 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color:#072F5F;
 }
 

@@ -1,7 +1,7 @@
 .home
 {
     padding:10px;
-    height:100vh;
+    height:90vh;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -24,7 +24,7 @@
     margin:0 auto;
     margin-left:200px;
     margin-top:50px;
-    font-size:1.5rem;
+    font-size:1rem;
     border:none;
     font-family:'Josefin Sans', sans-serif;
 
@@ -52,7 +52,7 @@
 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight:900;
-    font-size:6.5rem;
+    font-size:6rem;
     color:#1261A0;
     width:85%;
     text-align: center;
@@ -64,7 +64,7 @@
 .left h5
 {
     font-family: 'Josefin Sans', sans-serif;
-    font-size:2.5rem;
+    font-size:2rem;
     width:85%;
     color:black;
     margin:0 auto;   
