@@ -12,22 +12,29 @@ const {onMeasureVitlas,heart}=props;
         <div className="head">
         <h1>Instructions</h1>
         <h2>SPO2 Measurement</h2>
+        <br/>
+
         </div>
 
         <div className="cbody">
-        <h3>
+        <h5>
         To measure your SpO2 successfully, read the following instructions carefully:
         <br/>
+        <br/>
+
         
      
 
 
-1. Please sit in an upright position and face the camera.
-2. Place your finger at a distance of 3-5 cms as shown below.
-3. Once you are ready, hit on the Measure button and wait for the camera to capture your finger's image. While this process is happening, please stay as still as you can.
+1. Please sit in an upright position and face the camera.        <br/>
+
+2. Place your finger at a distance of 3-5 cms as shown below.        <br/>
+
+3. Once you are ready, hit on the Measure button and wait for the camera to capture your finger's image. While this process is happening, please stay as still as you can.        <br/>
+
 4. After capturing the image please wait for about 5-10 seconds for a alert message before hitting the Next button
 <br/>
-        </h3>
+        </h5>
         </div>
 
         <div className="foot">
