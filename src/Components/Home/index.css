@@ -1,0 +1,22 @@
+.home
+{
+    border:3px solid red;
+    height:90vh;
+    display: flex;
+}
+
+.item
+{
+    flex:1;
+    border:3px solid pink;
+    height:100%;
+}
+
+.left
+{
+
+}
+.right
+{
+
+}

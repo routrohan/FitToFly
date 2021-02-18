@@ -1,0 +1,42 @@
+.result-box
+{
+    height:100vh;
+    width:100%;
+    margin-top:20px;
+}
+
+.result-box h1
+{
+    color:#1261A0;
+    font-weight:800;
+    font-size:4rem;
+}
+
+.result-box h4
+{
+    color:#1261A0;
+    font-weight:800;
+    font-size:2rem;
+}
+
+
+
+.tables
+{
+    display: flex;
+    padding:40px;
+    
+
+}
+
+.table-box
+{
+    flex:1;
+    padding:10px;
+}
+
+.verdict h5
+{
+    margin:10px;
+    font-size: 2rem;
+}

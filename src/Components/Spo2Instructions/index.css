@@ -13,18 +13,36 @@
     padding:10px 50px;
     font-size:20px;
     line-height: 2;
-
+    font-family: 'Roboto', sans-serif;
+    color:#072F5F;
 
 }
+
+.head h1
+{
+    color:#1261A0;
+    font-weight: 900;
+    font-size:4rem;
+}
+.head h2
+{
+    color:#1261A0
+
+    ;
+}
+
 
 .head
 {
     width:100%;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .foot
 {
+    font-family: 'Roboto', sans-serif;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -36,12 +54,15 @@
 
 .button-box
 {
-    color: white;
-    background-color: blue;
+    background-color:#1261A0;
+    border-radius:5px;
+    border:1px solid white;
+    color:white;
     width:200px;
     padding:20px;
     font-size:19px;
     margin:10px;
+    margin-top:20px;
     cursor: pointer;
 }
 

@@ -34,7 +34,10 @@ function App (props) {
         return <div className="photo-box"><img src={dataUri}/>
 
         <button className="button-box" onClick={()=>reTake()}>Take Again</button>
-        <button className="button-box" onClick={()=>onClickNext()}>Next</button>
+        <button className="button-box" onClick={()=>onClickNext()}>Next&nbsp;&nbsp;&nbsp;
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+      </svg></button>
 
         </div>
 
@@ -44,7 +47,7 @@ function App (props) {
     const renderCamera=()=>
     {
         return(
-            <div>
+            <div className="photo-box">
         <Camera
           onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
         />
@@ -62,11 +65,11 @@ function App (props) {
   }
  
   return (
-      <div className="mainBox">
+      <div>
 
       {
         (moveToDasboard)?<Dashboard {...props} spo2={dataUri} />:(
-          <div>
+          <div className="mainBox">
       <h1>Vital Test</h1>
       <h2>SPO2 Test Rate</h2>
       {
