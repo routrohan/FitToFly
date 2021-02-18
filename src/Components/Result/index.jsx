@@ -8,6 +8,8 @@ function Index(props) {
 
     const { spo2, heart, files } = props;
 
+    
+
     const [spoResult, changespoResult] = useState("");
     const [heartResult, changeheartResult] = useState("");
 

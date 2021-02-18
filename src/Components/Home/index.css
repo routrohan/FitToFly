@@ -1,22 +1,79 @@
 .home
 {
-    border:3px solid red;
-    height:90vh;
+    padding:10px;
+    height:100vh;
     display: flex;
+    flex-direction: column;
+    background-color: white;
 }
 
 .item
 {
     flex:1;
-    border:3px solid pink;
+    /* border:3px solid pink; */
+    height:100%;
+}
+
+.head-btn
+{
+    background-color: #1261A0;
+    width:300px;
+    padding:15px 25px;
+    border-radius:25px;
+    color:white;
+    margin:0 auto;
+    margin-left:200px;
+    margin-top:50px;
+    font-size:1.5rem;
+    border:none;
+    font-family:'Josefin Sans', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+
+.content
+{
+    display: flex;
     height:100%;
 }
 
 .left
 {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.left h1
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:900;
+    font-size:6.5rem;
+    color:#1261A0;
+    width:85%;
+    text-align: center;
+    /* border:3px solid red; */
+
+
+}
+
+.left h5
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:2.5rem;
+    width:85%;
+    color:black;
+    margin:0 auto;   
+     /* border:3px solid red; */
+
+
+
 }
 .right
 {
-
+    text-align: center;
 }

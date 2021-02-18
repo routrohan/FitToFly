@@ -2,22 +2,30 @@ import React, { useState } from 'react';
 import './index.css';
 import TestScreenController from '../testScreenController.js';
 import LoginComponent from '../LoginComponent';
+import Home from '../Home';
 
 function Index(props) {
 
-    const [buttonState,changeState]=useState(false);
+    const [buttonState, changeState] = useState(false);
 
-    const onSubmit=()=>
-    {
+    const getStarted = () => {
         changeState(true);
     }
 
+    const dashData = () => {
+        return (
+            <div>
+           <Home getStarted={()=>getStarted()} />
+            </div>
+        )
+    }
+
     return (
-        <div>
-        {
-            (!buttonState)?<LoginComponent onSubmit={()=>onSubmit()} /> : <TestScreenController/>
-        }
-        </div>
+                <div>
+                    {
+                        (!buttonState) ? dashData(): <TestScreenController />
+                    }
+                </div>
     );
 }
 
