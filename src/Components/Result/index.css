@@ -43,3 +43,26 @@
     text-decoration: underline;
     border-radius:3px;
 }
+
+
+.generate
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+    
+}
+
+.generate-btn
+{
+    margin: 0 auto;
+    width:400px;
+    border:1px solid white;
+    padding:10px 20px;
+    font-size:1.5rem;
+    color:white;
+    background-color: #072F5F;
+
+
+}

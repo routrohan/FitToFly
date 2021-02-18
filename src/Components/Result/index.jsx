@@ -4,12 +4,18 @@ import { Spinner, Table } from 'react-bootstrap';
 import axios from 'axios';
 import {Modal,Button} from 'react-bootstrap';
 
+import jsPDF from 'jspdf';
+import { renderToString } from "react-dom/server";
+
 
 
 function Index(props) {
 
 
     const { spo2, heart, files } = props;
+    let message = ""
+
+
     const [spoResult, changespoResult] = useState("");
     const [heartResult, changeheartResult] = useState("");
     const [show, setShow] = useState(true);
@@ -63,6 +69,65 @@ function Index(props) {
             .then(data =>{ changeheartResult(data);setShow(false)});
 
     }, [])
+
+    const styles = {
+        fontFamily: "sans-serif",
+        textAlign: "center"
+      };
+      const colstyle = {
+        width: "40%"
+      };
+      const tableStyle = {
+        width: "100%"
+      };
+      const wrapStyle = {
+          whiteSpace: "unset"
+      }
+
+    const Prints = () => (
+        <div>
+          <h1>Fit-To-Fly Test Report</h1>
+          <br/>
+          <br/>
+          <h3 style={wrapStyle}>
+          Fit-To-Fly helps you to assess your vital levels remotely , all by your self <br/> and at your own comfort.It warns you in case of unhealthy vital levels,<br/>helping you to plan your outing accordingly.
+          </h3>
+          <br/>
+          <h3>Result:</h3>
+          <table id="tab_customers" class="table table-striped" style={tableStyle}>
+            <colgroup>
+              <col span="1" style={colstyle} />
+              <col span="1" style={colstyle} />
+            </colgroup>
+            <thead>
+              <tr class="warning">
+                <th>Heart-Rate</th>
+                <th>Respiratory</th>
+                <th>SpO2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{heartResult.data.split(',')[0]}</td>
+                <td>{heartResult.data.split(',')[1]}</td>
+                <td>{spoResult.data}</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>
+            Analysis: <br/>{message}
+          </h3>
+        </div>
+      );
+
+    const print = () => {
+        const string = renderToString(<Prints />);
+        const pdf = new jsPDF("p", "mm", "a4");
+        pdf.fromHTML(string);
+        pdf.save("Report");
+      };
+
+    
 
 
     const getResults = () => {
@@ -135,15 +200,29 @@ function Index(props) {
                                         const data2 = parseFloat(heartResult.data.split(',')[1]);
                                         const data3 = parseFloat(spoResult.data);
 
+                                        let message1="Your Vitals are within the safe limits . You are good to travel . Have a Safe Journey";
+                                        let message2=" Your Vitals seem to deviate from the safe range We suggest you to get tested before proceeding to travel"
+
+
+
                                         if (data1 >= 70 && data1 <= 100 && data2 >= 12 && data2 <= 18 && data3 >= 95)
-                                            return <h5 style={{color:"green"}}>Your Vitals are within the safe limits . You are good to travel . Have a Safe Journey</h5>
+                                           {
+                                               message=message1;
+                                                return <h5 style={{color:"green"}}>{message}</h5>
+                                           }
                                         else
-                                            return <h5 style={{color:"red"}}>  Your Vitals seem to deviate from the safe range.
-                                               We suggest you to get tested before proceeding to travel </h5>
+                                        {
+                                            message=message2;
+                                            return <h5 style={{color:"red"}}>{message}  </h5>
+                                        }
 
                                     })()
 
+
                                 }
+                                <div className="generate">
+                                <button className="generate-btn" onClick={print}>Generate Report</button>
+                                </div>
                             </div>
                         )
                     ) : (<div />)
