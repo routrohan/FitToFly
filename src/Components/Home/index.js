@@ -13,13 +13,8 @@ function Home(props) {
         <div className="item left">
 
         <h1> Fit-to-fly</h1>
-
         <br/>
-
-       
-
-
-        <h5>        This tool helps you to assess your vital levels remotely , all by your self and at your own comfort. It warns you in case of unhealthy vital levels, helping you to plan your outing accordingly. 
+        <h5>This tool helps you to assess your vital levels remotely , all by your self and at your own comfort.It warns you in case of unhealthy vital levels, helping you to plan your outing accordingly.
         </h5>
 
         <button  onClick={()=>props.getStarted()} className="head-btn">Get Started</button>

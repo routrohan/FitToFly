@@ -10,6 +10,7 @@ function Index(props) {
 
     const [moveToUplaod,changeMoveToUpload]=useState(false);
 
+    
 
     const getLoadingData=()=>
     {
@@ -23,9 +24,7 @@ function Index(props) {
       </div>
       )
     }
-
-  
-
+    
     const onContinue=()=>
     {
         changeMoveToUpload(true);   
@@ -36,7 +35,7 @@ function Index(props) {
         return (
             <div className="dash">
             <h3>Your Captures : </h3>
-            <div>
+            <div className="img-box" >
             <img src={props.heart}/>
             <img src={props.spo2}/>
             </div>
