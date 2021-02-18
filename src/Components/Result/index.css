@@ -42,6 +42,7 @@
     font-weight:800;
     text-decoration: underline;
     border-radius:3px;
+    text-align: center;
 }
 
 
@@ -60,7 +61,7 @@
     width:400px;
     border:1px solid white;
     padding:10px 20px;
-    font-size:1.5rem;
+    font-size:1.1rem;
     color:white;
     background-color: #072F5F;
 

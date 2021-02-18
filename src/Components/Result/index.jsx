@@ -186,7 +186,7 @@ function Index(props) {
                     </div>
 
                 </div>
-                <h4>Verdict</h4>
+                <h4 style={{fontSize:"3rem"}} >Verdict</h4>
                 {
                     (spoResult && heartResult) ? (
 

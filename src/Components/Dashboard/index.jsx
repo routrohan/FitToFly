@@ -24,7 +24,7 @@ function Index(props) {
       </div>
       )
     }
-    
+
     const onContinue=()=>
     {
         changeMoveToUpload(true);   
