@@ -36,7 +36,7 @@ function Index(props) {
         return (
             <div className="dash">
             <h3>Your Captures : </h3>
-            <div className="img-box">
+            <div>
             <img src={props.heart}/>
             <img src={props.spo2}/>
             </div>
