@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import TestScreenController from '../testScreenController';
 
 
 class LoginForm extends React.Component {
@@ -7,9 +8,27 @@ class LoginForm extends React.Component {
     constructor(props)
     {
         super(props);
+
+        this.state={
+            submit:false
+        }
+
     }
+
+    onSubmit()
+    {
+        this.setState({submit:true});
+    }
+
   render() {
-    return <Container {...this.props} />;
+    return(
+
+        <div>
+        {
+            (this.state.submit)?<TestScreenController />: <Container onSubmit={()=>this.onSubmit()} {...this.props} />
+        }
+        </div>
+  )
   }
 }
 
@@ -49,7 +68,7 @@ class Form extends React.Component {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -70,19 +89,25 @@ class Form extends React.Component {
   clearForm() {
     this.setState({
       email: "",
-      password: ""
+      password: "",
+      pnr:""
     });
   }
   render() {
     return (
+        <div style={{border:"3px solid #072F5F",padding:"20px"}}>
+        <div>
+        <h1 style={{color:"#072F5F",fontSize:"2.5rem",textAlign:"center"}}>SIGN IN</h1>
+        </div>
       <form
+   
         className="needs-validation"
         noValidate
-        onSubmit={this.handleSubmit}
       >
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email address</label>
+          <label style={{color:"#1261A0"}} htmlFor="exampleInputEmail1">Email address</label>
           <input
+          style={{border:"3px solid #1261A0"}}
             type="email"
             name="email"
             className="form-control"
@@ -98,8 +123,10 @@ class Form extends React.Component {
           </small>
         </div>
         <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Password</label>
+          <label  style={{color:"#1261A0"}} htmlFor="exampleInputPassword1">Password</label>
           <input
+          style={{border:"3px solid #1261A0"}}
+
             type="password"
             name="password"
             className="form-control"
@@ -110,17 +137,27 @@ class Form extends React.Component {
             onChange={this.handleChange}
           />
         </div>
-        <button onClick={()=>this.props.onSubmit()} type="submit" className="btn btn-primary">
+        <div className="form-group">
+        <label style={{color:"#1261A0"}} htmlFor="exampleInputPassword1">PNR Number</label>
+        <input
+        style={{border:"3px solid #1261A0"}}
+          type="text"
+          name="pnr"
+          className="form-control"
+          id="exampleInputPassword1"
+          required
+          placeholder="PNR Number"
+          value={this.state.pnr}
+          onChange={this.handleChange}
+        />
+      </div>
+      <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+        <button style={{width:"200px",backgroundColor:"#072F5F",color:"white",fontSize:"1.5rem",margin:"0 auto"}} onClick={()=>this.props.onSubmit()} type="submit" className="btn btn-primary">
           Submit
         </button>
-        <button
-          type="button"
-          className="btn btn-secondary float-right"
-          onClick={this.clearForm}
-        >
-          Cancel
-        </button>
+        </div>
       </form>
+      </div>
     );
   }
 }

@@ -3,6 +3,7 @@ import './index.css';
 import TestScreenController from '../testScreenController.js';
 import LoginComponent from '../LoginComponent';
 import Home from '../Home';
+import Logo from '../Home/logo.jpeg';
 
 function Index(props) {
 
@@ -23,7 +24,10 @@ function Index(props) {
     return (
                 <div>
                     {
-                        (!buttonState) ? dashData(): <TestScreenController />
+                        
+                        (!buttonState) ? dashData(): (<div className="login-comp" style={{height:"100vh"}}> 
+                        <img  src={Logo} width="280" height="220" />
+                         <LoginComponent /></div>)
                     }
                 </div>
     );
