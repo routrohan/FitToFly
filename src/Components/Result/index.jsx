@@ -201,7 +201,7 @@ function Index(props) {
                                         const data3 = parseFloat(spoResult.data);
 
                                         let message1="Your Vitals are within the safe limits . You are good to travel . Have a Safe Journey";
-                                        let message2=" Your Vitals seem to deviate from the safe range We suggest you to get tested before proceeding to travel"
+                                        let message2=" Your Vitals seem to deviate from the safe range We suggest you to get tested before proceeding."
 
 
 
